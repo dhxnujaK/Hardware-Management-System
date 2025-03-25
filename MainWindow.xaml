@@ -1,10 +1,25 @@
-﻿<Window x:Class="Hardware_Management_System.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hardware_Management_System"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="Hardware_Management_System.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid/>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF0F4497" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <mah:Tile Content="DILHAN HARDWARE" HorizontalAlignment="Center" Height="92" Margin="0,58,0,0" VerticalAlignment="Top" Width="388" Click="Tile_Click" FontFamily="Global User Interface" FontSize="36" Foreground="White"/>
+        <Label Content="Username" HorizontalAlignment="Left" Height="37" Margin="162,188,0,0" VerticalAlignment="Top" Width="89" Cursor="Hand" FontSize="16" Foreground="White"/>
+        <Label Content="Password" HorizontalAlignment="Left" Height="37" Margin="162,230,0,0" VerticalAlignment="Top" Width="89" Cursor="Hand" FontSize="16" Foreground="White"/>
+        <TextBox x:Name="usernametextbox" HorizontalAlignment="Left" Margin="336,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="326" TextChanged="TextBox_TextChanged"/>
+        <PasswordBox x:Name="passwordtextbox" HorizontalAlignment="Left" Margin="336,240,0,0" 
+                     VerticalAlignment="Top" Width="326"/>
+        <Button Content="Login" HorizontalAlignment="Left" Height="32" Margin="440,313,0,0" VerticalAlignment="Top" Width="118" Background="Red" Foreground="White" FontSize="16" Click="Button_Click"/>
+    </Grid>
 </Window>

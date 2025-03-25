@@ -20,5 +20,35 @@ namespace Hardware_Management_System
         {
             InitializeComponent();
         }
+
+        private void Tile_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string username = usernametextbox.Text;
+            string password = passwordtextbox.Password;
+
+            if (username == "admin" && password == "admin")
+            {
+                MessageBox.Show("Login Successful");
+                this.Hide();
+                //Dashboard dashboard = new Dashboard();
+                //dashboard.Show();
+                MainScreen mainScreen = new MainScreen();
+                mainScreen.Show();
+            }
+            else
+            {
+                MessageBox.Show("Login Failed");
+            }
+        }
     }
 }
