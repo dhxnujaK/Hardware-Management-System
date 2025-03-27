@@ -31,16 +31,20 @@
     </Window.Resources>
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="111*"/>
+            <ColumnDefinition Width="499*"/>
+            <ColumnDefinition Width="147*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle HorizontalAlignment="Left" Height="436" Stroke="Black" VerticalAlignment="Center" Width="245" Fill="#FF000B51" Grid.ColumnSpan="3"/>
+        <Button Content="Cement" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="44" Width="245" Margin="0,10,0,0" FontSize="14" FontWeight="Bold"/>
+        <Button Content="Electrical Appliances" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="44" Width="245" Margin="0,206,0,0" FontSize="14" FontWeight="Bold"/>
+        <Button Content="Home Appliances" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="44" Width="245" Margin="0,157,0,0" FontSize="14" FontWeight="Bold"/>
+        <Button Content="Steel Rods" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="44" Width="245" Margin="0,108,0,0" FontSize="14" FontWeight="Bold"/>
+        <Button Content="Paint" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="44" Width="245" Margin="0,59,0,0" FontSize="14" FontWeight="Bold"/>
+        <Label Grid.Column="2" Content="Welcome to the Hardware Management System" HorizontalAlignment="Left" Height="35" Margin="167,32,0,0" VerticalAlignment="Top" Width="430" Background="#00000000" Foreground="#FFB50D0D" FontFamily="Arial Black" FontSize="16" Grid.ColumnSpan="2"/>
         <!-- Header (TextBlock) -->
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" Margin="0,20,0,0" Text="Welcome to the Hardware Categories!"/>
 
-        <!-- Categories Section -->
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="20">
-            <mah:Tile Content="Cement" Style="{StaticResource ModernButtonStyle}" Click="CategoryButton_Click"/>
-            <mah:Tile Content="Steel Bars" Style="{StaticResource ModernButtonStyle}" Click="CategoryButton_Click"/>
-            <mah:Tile Content="Home Appliances" Style="{StaticResource ModernButtonStyle}" Click="CategoryButton_Click"/>
-            <mah:Tile Content="Electrical Appliances" Style="{StaticResource ModernButtonStyle}" Click="CategoryButton_Click"/>
-            <mah:Tile Content="Paints" Style="{StaticResource ModernButtonStyle}" Click="CategoryButton_Click"/>
-        </StackPanel>
     </Grid>
 </Window>
